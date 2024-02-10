@@ -1,0 +1,101 @@
+# Creando el repositorio
+
+1 Cambiamos a la carpeta donde queremos crear el nuevo repositorio
+
+curso-github/mi-primer-repositorio (main)
+$ cd ..
+
+2 Creamos la carpeta para el repositorio
+
+...curso-github
+$ mkdir proyecto-github^C
+
+3 Comprobamos las carpeta creada
+
+/curso-github
+$ ls
+mi-primer-repositorio/  proyecto-github/
+Existen dos carpetas
+
+4 Creamos el repositorio
+
+proyecto-github
+$ git init
+Initialized empty Git repository in C:/Users/mmarg/Desktop/MANUEL_MARQUEZ_GABARDINO/Programacion/Github/curso-github/proyecto-github/.git/
+
+
+5 comprobamos que es un repositorio con ls
+
+/proyecto-github (master)
+$ ls
+enviar-repositorio-local-a-github.txt
+
+vemos (master al final)
+
+6 Vemos en que estado esta el archivo
+
+...proyecto-githu
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        enviar-repositorio-local-a-github.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+6 Vamos a vs code y vemos a la izquierda una U de untra
+7 lo añadimos al estado de stage
+
+Previamente guardamos el archivo en vs code y vemos m a la izquierda de modificado
+    ...proyecto-github (master)
+$ git add enviar-repositorio-local-a-github.txt
+
+Comprobamos el estado
+
+/proyecto-github (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   enviar-repositorio-local-a-github.txt
+
+
+Añadimos git commit y finalmente con git push lo enviamos al remoto
+
+git push enviar-repositorio-local-a-github.txt
+
+8 En github creamos el repositorio remoto. No tiene que tener el mismo nombre
+  Click derecha superior en boton + 
+  Click en el desplegable New repository
+  Repository name proyecto-github
+  Click Create repository
+
+9 Vemos los repositorios remotos
+
+proyecto-github (master)
+$ git remote -v
+
+No vemos ningun repositorio
+
+10 añadimos un origin al remoto
+
+Vamos a github y copiamos la url del repositorio creado en Github proyecto-github
+
+proyecto-github (master)
+$ git remote add origin https://github.com/.../proyecto-github.git
+
+
+11 Verificamos los repositorios remotos
+
+proyecto-github (master)
+$ git remote -v
+origin  https://github.com/mmargabgit/proyecto-github.git (fetch)
+origin  https://github.com/mmargabgit/proyecto-github.git (push)
+Vemos que tenemos los repositorios creados
+
